@@ -2,7 +2,7 @@
 
 App for managing my family's schedules and making sure things get done.
 
-More details and specs to come...
+It's kinda like if a calendar and a todo list had a baby. I'll elaborate when I have spoons.
 
 ## Note
 
