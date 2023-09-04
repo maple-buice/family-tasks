@@ -3,13 +3,13 @@ namespace family_tasks.Repository.Models;
 public class TaskEvent
 {
     public long Id { get; set; }
-    public FamilyTask FamilyTask { get; set; }
+    public required FamilyTask FamilyTask { get; set; }
 
     public DateOnly Date { get; set; }
     public TimeOnly? StartTime { get; set; }
     public TimeOnly? EndTime { get; set; }
 
-    public FamilyMember Asignee { get; set; }
+    public FamilyMember? Asignee { get; set; }
 
     // Default to 5000
     // if dragged to top 0

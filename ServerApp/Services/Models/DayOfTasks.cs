@@ -4,5 +4,5 @@ namespace family_tasks.Services.Models;
 
 public class DayOfTasks {
     public DateOnly Day {get; set;}
-    public List<TaskEvent> Tasks {get; set;}
+    public required List<TaskEvent> Tasks {get; set;}
 }

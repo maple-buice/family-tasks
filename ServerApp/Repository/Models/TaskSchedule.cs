@@ -3,7 +3,7 @@ namespace family_tasks.Repository.Models;
 public class TaskSchedule
 {
     public int Id { get; set; }
-    public FamilyTask Task { get; set; }
+    public required FamilyTask Task { get; set; }
 
     public Frequency Frequency { get; set; }
     public DayOfWeek[]? DaysOfTheWeek { get; set; }
