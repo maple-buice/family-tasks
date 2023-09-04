@@ -20,7 +20,7 @@ public class CalendarService
         {
             Month = offsetDate.Month,
             Year = offsetDate.Year,
-            Days = _context.TasksOccurrences
+            Days = _context.TaskOccurrences
             .Where(x =>
                 x.Date.Month == offsetDate.Month
                 && x.Date.Year == offsetDate.Year)
@@ -44,7 +44,7 @@ public class CalendarService
         {
             FirstDayOfWeek = firstDayOfWeek,
             LastDayOfWeek = lastDayOfWeek,
-            Days = _context.TasksOccurrences
+            Days = _context.TaskOccurrences
             .Where(x =>
                 x.Date >= firstDayOfWeek
                 && x.Date <= lastDayOfWeek)
@@ -65,7 +65,7 @@ public class CalendarService
         return new DayOfTasks
         {
             Day = offsetDate,
-            Tasks = _context.TasksOccurrences
+            Tasks = _context.TaskOccurrences
                 .Where(x => x.Date == offsetDate).ToList()
         };
     }

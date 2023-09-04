@@ -23,4 +23,28 @@ public class TaskController : ControllerBase
     {
         return _taskService.GetAll();
     }
+
+    [HttpGet("{id}")]
+    public FamilyTask GetById(int id)
+    {
+        return _taskService.Get(id) ?? throw new KeyNotFoundException($"{id}");
+    }
+
+    [HttpPost]
+    public FamilyTask Create(FamilyTask task)
+    {
+        return _taskService.Create(task);
+    }
+
+    [HttpPut]
+    public void Update(FamilyTask task)
+    {
+        _taskService.Update(task);
+    }
+
+    [HttpDelete("{id}")]
+    public void Delete(int id)
+    {
+        _taskService.Delete(id);
+    }
 }

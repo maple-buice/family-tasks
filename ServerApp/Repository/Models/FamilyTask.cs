@@ -6,8 +6,7 @@ public class FamilyTask
 
     public required string Title { get; set; }
     public string? Summary { get; set; }
-
     public Category? Category { get; set; }
-    public TaskSchedule? FamilyTaskRepeatSchedule { get; set; }
-    public List<TaskEvent>? FamilyTaskOccurrences { get; set; }
+
+    public required TaskSchedule TaskSchedule { get; set; }
 }

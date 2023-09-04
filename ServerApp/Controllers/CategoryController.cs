@@ -23,4 +23,28 @@ public class CategoryController : ControllerBase
     {
         return _categoryService.GetAll();
     }
+
+    [HttpGet("{id}")]
+    public Category GetById(int id)
+    {
+        return _categoryService.Get(id) ?? throw new KeyNotFoundException($"{id}");
+    }
+
+    [HttpPost]
+    public Category Create(Category category)
+    {
+        return _categoryService.Create(category);
+    }
+
+    [HttpPut]
+    public void Update(Category category)
+    {
+        _categoryService.Update(category);
+    }
+
+    [HttpDelete("{id}")]
+    public void Delete(int id)
+    {
+        _categoryService.Delete(id);
+    }
 }
